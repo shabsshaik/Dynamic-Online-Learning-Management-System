@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LMS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="/static/Website.css">
+
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+  <script>
+    function button() {
+      var main_hide = document.getElementById("main_hide");
+      var moreText = document.getElementById("hide");
+      var btnText = document.getElementById("slide_right");
+      var spam = document.getElementById("spam");
+    
+      if (main_hide.style.display === "none") {
+        main_hide.style.display = "flex";
+        l=btnText.classList.add('button');
+        spam.innerHTML = "show all"; 
+        moreText.style.display = "none";
+
+
+      } else {
+        main_hide.style.display = "none";
+        moreText.style.display = "flex";
+        spam.innerHTML = "show less"; 
+      }
+    }
+        function login(){
+            window.location.href="http://127.0.0.1:8000/login/";
+        }
+
+        function SigUp(){
+            window.location.href="http://127.0.0.1:8000/signup/";
+        }
+
+    </script>
+</head>
+<body>
+  <header class="header">
+    <img src="/static/img/lms_logo.png" alt="lms_logo" class="logo"></img>
+    <nav class="nav-items">
+      <a href="">Home</a>
+      <a href="#course" class="scrollLink">Course</a>
+      <a onclick="login()" style="cursor: pointer;">Login</a>
+      <a onclick="SigUp()" style="cursor: pointer;">SigUp</a>
+
+      <div class="search-box">
+        <button class="btn-search"><i class="fas fa-search"></i></button>
+        <input type="text" class="input-search" placeholder="Search Here">
+      </div>
+      
+    </nav>
+  </header>
+  <main>
+    <div class="intro">
+      <h1>Learning Management System</h1>
+      <p>Every Day Is Chance To Learn.</p>
+      <a href="#course" class="scrollLink" style="text-decoration:none" >Start Learning</a>
+    </div>
+
+    <div class="course" id="course">
+      Courses
+    </div>
+
+    <div class="achievements" >
+
+      <div class="work" id="work">
+        <div class="card">
+          <img src="/static/img/python.jpg" alt="Python" style="width:280px;height: 200px; border-radius: 5px;">
+          <h3>Python For Begineers</h3>
+          <p>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </p>
+          <p class="price">Free</p>
+          <p><button><a onclick="login()" style="cursor: pointer;" >Enroll</button></a></p>
+        </div>
+      </div>
+
+      <div class="work" id="work">
+        <div class="card">
+          <img src="/static/img/react.jpg" alt="React" style="width:280px;height: 200px;border-radius: 5px;">
+          <h3>React For Begineers</h3>
+          <p>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </p>
+          <p class="price">$59.99</p>
+          
+          <p><button><a onclick="login()" style="cursor: pointer;" >Enroll</button></a></p>
+        </div>
+      </div>
+
+      <div class="work" id="work">
+        <div class="card">
+          <img src="/static/img/php.jpg" alt="Php" style="width:280px;height: 200px;border-radius: 5px;">
+          <h3>Php For Begineers</h3>
+          <p>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </p>
+          <p class="price">Free</p>
+          <p><button><a onclick="login()" style="cursor: pointer;" >Enroll</button></a></p>
+        </div>
+      </div>
+    
+      <div class="work" id="work">
+        <div class="card">
+          <img src="/static/img/java.jpg" alt="JAVA" style="width:280px;height: 200px;border-radius: 5px;">
+          <h3>Java For Begineers</h3>
+          <p>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </p>
+          <p class="price">$16.39</p>
+          <p><button><a onclick="login()" style="cursor: pointer;">Enroll</button></a></p>
+        </div>
+      </div>
+      
+    </div>
+
+    <span id="main_hide"></span>
+    <span id="hide">
+      <div class="achievements" >
+
+        <div class="work" id="work">
+          <div class="card">
+            <img src="/static/img/cn.jpg" alt="computer Network" style="width:280px;height: 200px; border-radius: 5px;">
+            <h3>Computer Networking</h3>
+            <p>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </p>
+            <p class="price">$19.98</p>
+            <p><button><a onclick="login()" style="cursor: pointer;">Enroll</button></a></p>
+          </div>
+        </div>
+  
+        <div class="work" id="work">
+          <div class="card">
+            <img src="/static/img//Machine.jpg" alt="Machine learning" style="width:280px;height: 200px;border-radius: 5px;">
+            <h3>Machine Learning For Begineers</h3>
+            <p>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+            </p>
+            <p class="price">$89.99</p>
+            <p><button><a onclick="login()" style="cursor: pointer;">Enroll</button></a></p>
+          </div>
+        </div>
+  
+        <div class="work" id="work">
+          <div class="card">
+            <img src="/static/img/cyber.jpg" alt="cyber security" style="width:280px;height: 200px;border-radius: 5px;">
+            <h3>Cyber Security</h3>
+            <p>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+            </p>
+            <p class="price">$75</p>
+            <p><button><a onclick="login()" style="cursor: pointer;">Enroll</button></a></p>
+          </div>
+        </div>
+      
+        <div class="work" id="work">
+          <div class="card">
+            <img src="/static/img/computer_org.jpg" alt="Computer Organization" style="width:280px;height: 200px;border-radius: 5px;">
+            <h3>Computer Organization</h3>
+            <p>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </p>
+            <p class="price">$8.66</p>
+            <p><button><a onclick="login()" style="cursor: pointer;">Enroll</button></a></p>
+          </div>
+        </div>
+        
+      </div>
+    </span>
+  </main>
+
+    <div class="btn" >
+      <button class="button" id="slide_right"  onclick="button()" style="vertical-align:middle"><span id="spam">show all</span></button>
+    </div>
+
+  <div class="achievements-1">
+    <div class="work" >
+      <i class="fas fa-atom"></i>
+      <p class="work-heading">Projects</p>
+      <p class="work-text">I have worked on many projects and I am very proud of them. I am a very good developer and I am always looking for new projects.</p>
+    </div>
+    <div class="work">
+      <i class="fas fa-skiing"></i>
+      <p class="work-heading">Skills</p>
+      <p class="work-text">I have a lot of skills and I am very good at them. I am very good at programming and I am always looking for new skills.</p>
+    </div>
+    <div class="work">
+      <i class="fas fa-ethernet"></i>
+      <p class="work-heading">Network</p>
+      <p class="work-text">I have a lot of network skills and I am very good at them. I am very good at networking and I am always looking for new network skills.</p>
+    </div>  
+    
+  </div>
+
+  <footer class="footer">
+    <div class="copy">&copy; 2022 Developer</div>
+    <div class="bottom-links">
+      <div class="links">
+        <span>More Info</span>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="links">
+        <span>Social Links</span>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

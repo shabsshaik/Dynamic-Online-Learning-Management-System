@@ -1,0 +1,130 @@
+{% include "header.html" %}
+<script>
+    function gotohome1()
+    {
+        document.getElementById('id02').style.display='block';
+    }
+    function call()
+    {
+        alert("You Have Already Registed This Course\n Please Check My Course");
+        window.location.href="http://127.0.0.1:8000/home/";
+    }
+</script>
+{% if sd %}
+{% for mess in sd %}
+{% if mess.alt is  None %}
+    {% for n in pd %}
+    <div class="second">
+        <div class="course">
+            
+          <span class="icon"><i class="fab fa-amazon-pay"></i></span>
+          <span class="item">Course Purchase</span>
+          <p>All Course << {{n.small_des}}</p>
+        </div>
+        <div class="payment_container" >
+
+            <div class="payment_img">
+                <img src="/static/img/{{n.img}}" alt="{{n.alt}}" style="width:400px;height: 320px;">
+            </div>
+
+            <div class="middle">
+            <div class="payment_matter">
+            <h2>{{n.small_des}}</h2>
+            <p>{{n.big_des}}</p>
+            </div>
+
+            <div class="payment_button">
+                <div class="star">
+                    <p>
+            {% for i in n.s_icon %}
+            <span class="fa fa-star checked"></span>
+            {% endfor %}
+                    </p>
+                </div>
+                <div class="corner">
+                  <p class="price"><i class='fas fa-cart-arrow-down' style="color: black;font-size: large;">{{n.price}}</i></p>
+            
+                  <div class="w3-container" >
+                    <button onclick="gotohome1()" class="pay_button" style="height:40px;width:140px; padding: 5px 0 10px 0;" id="start">Start Learning</button>
+                    <div id="id02" class="w3-modal">
+                        <div class="w3-modal-content w3-card-4" style="vertical-align: top;height:400px;width:500px;background-color: rgb(255, 255, 255);border: 2px solid #73AD21;border-radius: 25px">
+                            <div style="max-width:500px; height:300px;border: 2px 2px solid #73AD21;border-radius: 25px;"><br>
+                                <br><center><i class="fa fa-check-circle" style="font-size:60px; color: #73AD21;"></i></center>
+                                <center><h2><b>  CONGRATS !</b> </h2></center>
+                               <b> <center><p>    This course is added to your learning path.</p></center></b>
+                              <center><p> <br>    Thank you for your interest! <br>    Check your Courses to Start and Enjoy Learning.</p></center> 
+                            </div>
+                              <center>
+                            <a href="update/{{ n.alt }}"<button class="w3-button w3-block w3-green w3-section w3-padding" style="vertical-align:middle;width:200px" type="button">Ok</span></button></center></a>
+                        </div>
+                        </div>
+                      </div>
+
+                  </div>
+                </div>
+            </div>
+        </div>
+            </div>
+        {% endfor %}
+        {% else %}
+        <body id="alert" onload="call()"></body>
+        {% endif %}
+        {% endfor %}
+        {% else %}
+        {% for n in pd %}
+        <div class="second">
+            <div class="course">
+                
+              <span class="icon"><i class="fab fa-amazon-pay"></i></span>
+              <span class="item">Course Purchase</span>
+              <p>All Course << {{n.small_des}}</p>
+            </div>
+            <div class="payment_container" >
+    
+                <div class="payment_img">
+                    <img src="/static/img/{{n.img}}" alt="{{n.alt}}" style="width:400px;height: 320px;">
+                </div>
+    
+                <div class="middle">
+                <div class="payment_matter">
+                <h2>{{n.small_des}}</h2>
+                <p>{{n.big_des}}</p>
+                </div>
+    
+                <div class="payment_button">
+                    <div class="star">
+                        <p>
+                {% for i in n.s_icon %}
+                <span class="fa fa-star checked"></span>
+                {% endfor %}
+                        </p>
+                    </div>
+                    <div class="corner">
+                      <p class="price"><i class='fas fa-cart-arrow-down' style="color: black;font-size: large;">{{n.price}}</i></p>
+                
+                      <div class="w3-container" >
+                        <button onclick="gotohome1()" class="pay_button" style="height:40px;width:140px; padding: 5px 0 10px 0;" id="start">Start Learning</button>
+                        <div id="id02" class="w3-modal">
+                            <div class="w3-modal-content w3-card-4" style="vertical-align: top;height:400px;width:500px;background-color: rgb(255, 255, 255);border: 2px solid #73AD21;border-radius: 25px">
+                                <div style="max-width:500px; height:300px;border: 2px 2px solid #73AD21;border-radius: 25px;"><br>
+                                    <br><center><i class="fa fa-check-circle" style="font-size:60px; color: #73AD21;"></i></center>
+                                    <center><h2><b>  CONGRATS !</b> </h2></center>
+                                   <b> <center><p>    This course is added to your learning path.</p></center></b>
+                                  <center><p> <br>    Thank you for your interest! <br>    Check your Courses to Start and Enjoy Learning.</p></center> 
+                                </div>
+                                  <center>
+                                <a href="update/{{ n.alt }}"<button class="w3-button w3-block w3-green w3-section w3-padding" style="vertical-align:middle;width:200px" type="button">Ok</span></button></center></a>
+                            </div>
+                            </div>
+                          </div>
+    
+                      </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+</div>
+</body>
+</html>

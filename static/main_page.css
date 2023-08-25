@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+html {
+scroll-behavior:smooth;
+}
+
+*{
+	list-style: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body{
+	background: #ffffff;
+}
+
+.wrapper{
+	background: rgba(255, 255, 255, 0.892);
+  position: relative;
+	top: 0;
+  left: 225px;
+  width: calc(100% - 225px);
+	height: 90px;
+	padding: 0px 10px;
+}
+
+.wrapper .sidebar{
+  background: #042330;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 225px;
+	height: 100%;
+	padding: 20px 0;
+	transition: all 0.5s ease;
+}
+
+.wrapper .sidebar .profile{
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.wrapper .sidebar .profile i{
+	display: block;
+	width: 100px;
+	height: 100px;
+  border-radius: 50%;
+	margin: 0 auto;
+  background: #fcf9f9;
+}
+
+.wrapper .sidebar .profile h3{
+	color: #ffffff;
+	margin: 10px 0 5px;
+}
+
+.wrapper .sidebar .profile p{
+	color: rgb(206, 240, 253);
+	font-size: 14px;
+}
+
+.wrapper .sidebar ul li a{
+	display: block;
+	padding: 13px 30px;
+	border-bottom: 1px solid #f4f5f6;
+	color: rgb(241, 237, 237);
+	font-size: 16px;
+	position: relative;
+}
+
+
+
+.wrapper .sidebar ul li a .icon{
+	color: #dee4ec;
+	width: 30px;
+	display: inline-block;
+}
+
+ 
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+	color: #0c7db1;
+	background:white;
+  border-right: 2px solid rgb(5, 68, 104);
+}
+
+.wrapper .sidebar ul li a:active{
+	color: #0c7db1;
+	background:white;
+  border-right: 2px solid rgb(5, 68, 104);
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+	color: #0c7db1;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+	display: block;
+}
+.course{
+  padding: 30px 0 30px 0;
+  width: 100%-225;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+
+  .course p{
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .course .icon{
+    background: #000000;
+    border-radius: 30%;
+    color: rgb(177, 238, 228);
+    padding: 4px;
+  }
+
+  
+  .achievements {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 40px ;
+    height: fit-content;
+    width: calc(100% - 15px);
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .achievements .work {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 7px;
+    transition: all .5s ease;
+    border: 5px solid white;
+  }
+  
+  .achievements .work:hover {
+    transform: scale(1.11);
+    overflow: hidden;
+    border: 2px solid ;
+    border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
+    animation: 3s rotate linear infinite;
+  }
+  
+  .achievements .work:not(:last-child) {
+  margin-right: 10px;
+  }
+  
+  .achievements .work .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  
+  .achievements .work .price{
+    color: rgb(91, 91, 91);
+    font-size: 18px;
+    padding: 2px 0px 2px 0px;
+  }
+  .achievements .work .price i{
+    border-radius: 50%;
+    color: rgb(0, 0, 0);
+    padding: 4px;
+    border: 2px solid;
+    background: #fefeff;
+  }
+
+  
+  .achievements .work .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 50%;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  
+  .achievements .work .card button:hover {
+    opacity: 0.7;
+  }
+  
+  .achievements .work .card button a{
+    text-decoration: none;
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 50%;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  
+  .achievements .work .card
+  .checked {
+    color: orange;
+  }
+  
+
+
+  /* payment page*/
+  
+  .payment_container{
+    display: flex;
+    padding: 20px 0px 0px 0px;
+    margin: 10px;
+  }
+
+  .payment_container .middle{
+    padding: 0px 0px 0px 3%;
+
+  }
+
+  .payment_container .payment_img img{
+border-radius: 30px;
+  }
+
+  .payment_container .payment_img img:hover{
+    transform: scale(1.004);
+    }
+
+.payment_matter h2{
+padding: 20px 0px 0px 2px;
+font-size: 22px;
+font-weight: 800;
+}
+
+.payment_matter p{
+  font-size: 18px;
+  font-weight: 100;
+  padding: 5px 0px 20px 5px;
+
+}
+
+
+.payment_button{
+  display: flex;
+  padding: 20px 0px 10px 0px;
+
+}
+
+.payment_button .star{
+  padding: 20px;
+  width: 70%;
+}
+
+.payment_button .star .checked{
+  color: orange;
+}
+
+.payment_button .corner{
+  display: flex;
+}
+
+.payment_button .corner .price{
+  display: flex;
+  padding: 20px 5px 20px 0px ;
+  color: rgb(146, 140, 140);
+  font-size: 22px;
+}
+
+
+.payment_button .corner .btn_button{
+  text-align: right;
+}
+
+.payment_button .corner .pay_button {
+background-color: #f8f3f3;
+color: #3e47cd;
+font-size: 16px;
+padding: 10px;
+width: 15px;
+height: 0px;
+cursor: pointer;
+margin: 5px;
+border: 2px solid;
+border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
+animation: 5s rotate linear infinite;
+}
+
+.payment_button .corner .pay_button:hover{
+  transform: scale(1.04);
+  background: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
+}
+
+@keyframes rotate {
+to {
+  --angle: 360deg;
+}
+}
+
+@property --angle {
+syntax: '<angle>';
+initial-value: 0deg;
+inherits: false;
+}
+
+
+
+

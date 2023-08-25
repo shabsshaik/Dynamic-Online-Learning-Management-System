@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main_page</title>
+    <link rel="stylesheet" href="/static/main_page.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+        function home(){
+            window.location.href="http://127.0.0.1:8000/home";
+        }
+
+        function recome(){
+            window.location.href="http://127.0.0.1:8000/recome";
+        }
+
+        function my_course(){
+            window.location.href="http://127.0.0.1:8000/my_course";
+        }
+
+        function course(){
+            window.location.href="http://127.0.0.1:8000/course";
+        }
+
+        function assment(){
+            window.location.href="http://127.0.0.1:8000/assment/";
+        }
+
+        function logout(){
+            window.location.href="http://127.0.0.1:8000/logout/";
+    };
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+    
+        <div class="sidebar">
+            <div class="profile">
+                <i class='fas fa-user-circle' style='font-size:100px'></i>
+                <h3>{{username}}</h3>
+                <p>Learner</p>
+            </div>
+            <ul>
+                <li>
+                    <a onclick="home()" style="cursor: pointer;" >
+                        <span class="icon"><i class="fas fa-book-open"></i></span>
+                        <span class="item">All Course</span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="recome()" style="cursor: pointer;">
+                        <span class="icon"><i class="fas fa-user-friends"></i></span>
+                        <span class="item">Recommended</span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="my_course()" style="cursor: pointer;">
+                        <span class="icon"><i class="fas fa-book-reader"></i></span>
+                        <span class="item">My Course</span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="assment()" style="cursor: pointer;">
+                        <span class="icon" style="cursor: pointer;"><i class="fas fa-tasks"></i></span>
+                        <span class="item">Assessment</span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="course()" style="cursor: pointer;">
+                        <span class="icon"><i class="fas fa-award"></i></span>
+                        <span class="item">Certificates</span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="logout()" style="cursor: pointer;">
+                        <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                        <span class="item">LogOut</span>
+                    </a>
+                </li>
+            </ul>
+        </div>

@@ -1,0 +1,31 @@
+{% include "header.html" %}
+    <div class="second">
+        <div class="course" id="course">
+            <span class="icon"><i class="fas fa-user-friends" id="change"></i></span>
+            <span class="item">Recommended Course</span>
+        </div>
+
+    <div class="achievements" id="achievements" >
+      {% for n in pd %}
+      {% if n.alt not in c and n.category in k %}
+      
+      <div class="work" id="work">
+        <div class="card">
+          <img src="/static/img/{{n.img}}" alt="{{n.alt}}" style="width:300px;height: 200px; border-radius: 5px;">
+          <h3>{{n.small_des}}</h3>
+          <p>
+            {% for i in n.s_icon %}
+            <span class="fa fa-star checked"></span>
+            {% endfor %}
+          </p>
+          <p class="price" style="color: black;">{{n.price}} <i class="{{n.c_icon}}" style="border:2px solid ;"></i></p>
+          <p><button><a href="payment_free/{{n.alt}}">Enroll</button></a></p>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+</div>
+</div>
+</body>
+</html>

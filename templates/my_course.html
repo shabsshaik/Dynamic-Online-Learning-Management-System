@@ -1,0 +1,30 @@
+{% include "header.html" %}
+    <div class="second">
+      <div class="course" id="course">
+            <span class="icon"><i class="fas fa-book-reader" id="change"></i></span>
+            <span class="item">My Course</span>
+          </div>
+
+    <div class="achievements" id="achievements" >
+      
+      {% for ni in pd %}
+      
+      <div class="work" id="work">
+        <div class="card">
+          <img src="/static/img/{{ni.img}}" alt="{{ni.alt}}" style="width:300px;height: 200px; border-radius: 5px;">
+          <h3>{{ni.small_des}}</h3>
+          <p>
+            {% for i in ni.s_icon %}
+            <span class="fa fa-star checked"></span>
+            {% endfor %}
+          </p>
+          <p class="price">{{ni.price}} <i class="fas fa-lock-open"></i></p>
+          <p><button><a href="course_view/{{ni.alt}}">Watch</button></a></p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+</div>
+</div>
+</body>
+</html>
